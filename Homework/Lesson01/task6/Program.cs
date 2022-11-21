@@ -3,7 +3,7 @@
 Console.WriteLine("Enter integral number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-double result = number % 2;
+int result = number % 2;
 
 if (result == 0) 
 {
