@@ -9,18 +9,13 @@ int b = Convert.ToInt32(Console.ReadLine());
 int max = a;
 int min = b;
 
-if (a > b)
+if (a < b)
 {
-  
-}
-
-else
-{
-    max = b; 
-    min = a;
+  max = b; 
+  min = a;
 }
 
 Console.Write("max = ");
 Console.WriteLine(max);
 Console.Write("min = ");
-Console.WriteLine(min);
+Console.WriteLine(min); 
