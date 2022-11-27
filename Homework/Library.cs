@@ -112,6 +112,21 @@ public static class Library
     
   }
 
+  // Сумма цифр натурального числа
 
+    int SumValueNumbers(int value)
+  {
+    
+      int sum = 0;
+          
+      while (value > 0)
+      {
+          int number = value % 10;
+          sum = sum + number;
+          value = value / 10;
+      }
+
+      return sum;
+  }
 }
 
