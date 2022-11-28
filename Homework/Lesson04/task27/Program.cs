@@ -25,3 +25,5 @@ int SumValueNumbers(int value)
 }
 
 Console.WriteLine($"Сумма цифр числа = {SumValueNumbers(value)}");
+
+// end

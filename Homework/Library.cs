@@ -112,9 +112,9 @@ public static class Library
     
   }
 
-  // Сумма цифр натурального числа
+  // Сумма цифр натурального числа (работает в рамках целого типа данных)
 
-    int SumValueNumbers(int value)
+  public staticint SumValueNumbers(int value)
   {
     
       int sum = 0;
@@ -127,6 +127,18 @@ public static class Library
       }
 
       return sum;
+  }
+
+    // Ввод элементов массива с консоли
+  public staticvoid FillArrayConsole(int[] numbers)
+  {
+      
+      for (int i=0; i < numbers.Length; i++)
+      {
+          Console.Write($" Введите элемент массива с индексом {i}: ");
+          numbers[i] = int.Parse(Console.ReadLine());
+      }
+    
   }
 }
 
