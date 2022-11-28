@@ -12,11 +12,11 @@ int[] CreateArray(int count)
     return new int[count];
 }
 
-void FillArrayRandom100to999(int[] randomnumber)
+void FillArrayRandom100to999(int[] randomNumber)
 {
-    for (int i = 0; i < randomnumber.Length; i++)
+    for (int i = 0; i < randomNumber.Length; i++)
     {
-        randomnumber[i] = new Random().Next(100, 1000);
+        randomNumber[i] = new Random().Next(100, 1000);
     }
 }
 
