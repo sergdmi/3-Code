@@ -33,7 +33,7 @@ int[] Sum(int[] f, int[] g)
 
         for (int i = 0; i < resultMin; i++)
         {
-            result[i] = f[i] +g[i];
+            result[i] = f[i] + g[i];
         }
 
         for (int i = resultMin; i < resultMax; i++)
