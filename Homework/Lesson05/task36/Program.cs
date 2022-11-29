@@ -33,7 +33,7 @@ string Print(int[] numbers)
     return(text + "]");
 }
 
-int SumOddNumbers (int[] numbers)
+int SumOddIndex (int[] numbers)
 {
     int sumOddIndex = 0;
     for (int i=0; i < numbers.Length; i++)
@@ -49,5 +49,5 @@ int SumOddNumbers (int[] numbers)
 int[] randomarray = CreateArray(4);
 FillArrayRandomInt(randomarray, -100, 100);
 Console.WriteLine(Print(randomarray));
-Console.WriteLine($"Сумма элементов массива с нечетным индексом:  {SumOddNumbers(randomarray)}");
+Console.WriteLine($"Сумма элементов массива с нечетным индексом:  {SumOddIndex(randomarray)}");
 
