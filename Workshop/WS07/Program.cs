@@ -8,14 +8,14 @@ for (int n = 0; n < 11; n++)
     
 }
 
-for (int i = 0; i < 10; i++)
-{
-    for (int j = 0; j < 11; j++)
-    {
-        Console.Write($"{pascal[i,j],4}");
-    }
-    Console.WriteLine();
-}
+// for (int i = 0; i < 10; i++)
+// {
+//     for (int j = 0; j < 11; j++)
+//     {
+//         Console.Write($"{pascal[i,j],4}");
+//     }
+//     Console.WriteLine();
+// }
 
 System.Console.WriteLine();
 System.Console.WriteLine();
@@ -38,4 +38,3 @@ for (int i = 0; i < 11; i++)
     Console.WriteLine();
 }
 
-// pascal [i, j] = pascal [i-1, j-1] +  pascal [i-1, j];
