@@ -40,10 +40,20 @@ Console.WriteLine(Print(s));
 
 string Print(int[] f)
 {
+    string[] pows = {"⁰", "¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"};
     string output = String.Empty;
     for (int i = 0; i < f.Length; i++)
     {
-        output += $"{f[i]}*x^{i} + ";
+        int t = f[i];
+        if (f[i] == 0) continue;
+        if (f[i] < 0) {output += " - "; }
+        else if (i != 0) { output += " + "; }
+
+        if (t < 0) t= -t;
+        if (i == 1) { output += $"{t}x"; }
+        if (i == 0) { output += $"{t}"; }
+        if (i != 1 && i != 0 && f[i] != 0) { output += $"{t}x{pows[i]}"; }
+     
     }
 
     return output;
