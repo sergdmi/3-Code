@@ -130,7 +130,7 @@ public static class Library
   }
 
     // Ввод элементов массива с консоли
-  public staticvoid FillArrayConsole(int[] numbers)
+  public static void FillArrayConsole(int[] numbers)
   {
       
       for (int i=0; i < numbers.Length; i++)
@@ -140,5 +140,56 @@ public static class Library
       }
     
   }
+  
+  // Сортировка элементов строк массива по убыванию
+  public static int[,] SortMatrixMaxMin(int[,] matrix)
+  {
+      int temp;
+
+      for (int i = 0; i < matrix.GetLength(0); i++)
+      {
+          for (int j = 0; j < matrix.GetLength(1) - 1; j++)
+          {
+              for (int n = j + 1; n < matrix.GetLength(1); n++)
+              {
+                  if (matrix[i, j] < matrix[i, n])
+                  {
+                      temp = matrix[i, j];
+                      matrix[i, j] = matrix[i, n];
+                      matrix[i, n] = temp;
+                  }
+
+              }
+          }
+      }
+      return matrix;
+  }
+
+    // Сортировка элементов строк массива по возрастанию
+  public static int[,] SortMatrixMinMax(int[,] matrix)
+  {
+      int temp;
+
+      for (int i = 0; i < matrix.GetLength(0); i++)
+      {
+          for (int j = 0; j < matrix.GetLength(1) - 1; j++)
+          {
+              for (int n = j + 1; n < matrix.GetLength(1); n++)
+              {
+                  if (matrix[i, j] > matrix[i, n])
+                  {
+                      temp = matrix[i, j];
+                      matrix[i, j] = matrix[i, n];
+                      matrix[i, n] = temp;
+                  }
+
+              }
+          }
+      }
+      return matrix;
+  }
+
+
+
 }
 
