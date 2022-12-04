@@ -3,7 +3,7 @@
 // 1. Задать массив (метод);
 // 2. Заполнить массив случайными числами (метод);
 // 3. Вывести исходный массив в консоль(метод);
-// 4. Задать алгоритм упорядочивания строк по убыванию (метод);
+// 4. Задать алгоритм упорядочивания строк массива по убыванию (метод);
 // 5. Вывести упорядоченный массив в консоль(метод);
 
 // start
@@ -37,7 +37,7 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int[,] SortMatrix(int[,] matrix)
+int[,] SortMatrixMaxMin(int[,] matrix)
 {
     int temp;
 
@@ -63,6 +63,6 @@ int[,] SortMatrix(int[,] matrix)
 int[,] matrix1 = CreateMatrix(5,5);
 FillMatrix(matrix1, 1, 10);
 PrintMatrix(matrix1);
-int[,] matrix2 = SortMatrix(matrix1);
+int[,] matrix2 = SortMatrixMaxMin(matrix1);
 Console.WriteLine("отсортированный массив:");
 PrintMatrix(matrix2);
