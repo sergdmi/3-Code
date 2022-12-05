@@ -10,6 +10,7 @@
 
 // start
 
+
 int[,] CreateMatrix(int row, int col)
 {
     return new int [row, col];
@@ -38,7 +39,7 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int [] SumArray (int[,] matrix)
+int[] SumArray(int[,] matrix)
 {
     int[] sumarray = new int [matrix.GetLength(0)];
     
@@ -68,15 +69,16 @@ int SumMin(int[] sumarray)
     return summin;      
 }
 
-int SumMinIndex(int[] sumarray, int summin)
+int[] SumMinRowNumber(int[] sumarray, int summin)
 {
-    int minindex = 0;
-
+    int[] minindex = new int[sumarray.Length];
+       
     for (int i = 0; i < sumarray.Length; i++)
     {
-        if (sumarray[i] == summin) { minindex = i;}
+        if (sumarray[i] == summin) {minindex[i] = i+1;}
+        else minindex[i] = 0;
     }
-                   
+    
     return minindex;
 }
 
@@ -95,16 +97,33 @@ string Print(int[] numbers)
   return result + "]";
 }
 
+string PrintIndex(int[] numbers)
+{
+  int size = numbers.Length;
+  int index = 0;
+  string result = "[ ";
+
+  while (index < size)
+  {
+    if(numbers[index] !=0) {result += ($"{numbers[index]}, ");}
+    index++;
+  }
+  return result + "]";
+}
+
+
 
 int[,] newmatrix = CreateMatrix(5, 4);
 FillMatrix(newmatrix, 0, 10);
 PrintMatrix(newmatrix);
 int[] task56array = SumArray(newmatrix);
-int summin = SumMin(task56array);
-int result = SumMinIndex (task56array, summin) + 1;
+int summin56 = SumMin(task56array);
+int[] minsumrow = SumMinRowNumber(task56array, summin56);
 Console.WriteLine();
 Console.WriteLine(Print(task56array));
 Console.WriteLine();
-Console.Write($"Минимальная сумма в строке {result}");
+Console.Write($"Минимальная сумма в строке: {(PrintIndex(minsumrow))}");
+
+// end
 
 // end
