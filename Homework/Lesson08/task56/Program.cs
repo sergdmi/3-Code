@@ -8,6 +8,8 @@
 // 6. Определить индекс наименьшего элемента массива сумм (метод);
 // 7. Вывести массив сумм и номер строки матрицы с наименьшей суммой. 
 
+// start
+
 int[,] CreateMatrix(int row, int col)
 {
     return new int [row, col];
@@ -68,12 +70,14 @@ int SumMin(int[] sumarray)
 
 int SumMinIndex(int[] sumarray, int summin)
 {
-    for (int index = 0; index < sumarray.Length; index++)
-        {
-            if (sumarray[index]  == summin) {return index;}
-        }
-        return -1;
-        
+    int minindex = 0;
+
+    for (int i = 0; i < sumarray.Length; i++)
+    {
+        if (sumarray[i] == summin) { minindex = i;}
+    }
+                   
+    return minindex;
 }
 
 
@@ -92,13 +96,15 @@ string Print(int[] numbers)
 }
 
 
-int[,] newmatrix = CreateMatrix(5, 5);
-FillMatrix(newmatrix, 1, 10);
+int[,] newmatrix = CreateMatrix(5, 4);
+FillMatrix(newmatrix, 0, 10);
 PrintMatrix(newmatrix);
-int[] summinarray = SumArray(newmatrix);
-int summin = SumMin(summinarray);
-int result = SumMinIndex (summinarray, summin) + 1;
+int[] task56array = SumArray(newmatrix);
+int summin = SumMin(task56array);
+int result = SumMinIndex (task56array, summin) + 1;
 Console.WriteLine();
-Console.WriteLine(Print(summinarray));
+Console.WriteLine(Print(task56array));
 Console.WriteLine();
 Console.Write($"Минимальная сумма в строке {result}");
+
+// end
