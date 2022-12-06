@@ -189,7 +189,30 @@ public static class Library
       return matrix;
   }
 
+  // Вывести натуральные числа от 0 до N (рекурсия)
+  public static void NumSegmentPlus(int n)
+  {
+      Console.WriteLine(n);
+      {
+          if (n >= N) return;
+          n++;
+          NumSegment(n);
+      }
+    
+  }
 
+  // Вывести натуральные числа от N до 0 (рекурсия)
+
+  public static void NumSegmentMinus(int n)
+  {
+      Console.WriteLine(n);
+      {
+          if (n <= 1) return;
+          n--;
+          NumSegment(n);
+      }
+    
+  }
 
 }
 
