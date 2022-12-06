@@ -214,5 +214,20 @@ public static class Library
     
   }
 
+  // Определить сумму натуральных элементов в промежутке от M до N
+
+  //SumNumSegment(M);
+  int SumNumSegment(int n)
+  {
+      
+          if (n == M) return M;        
+          else return SumNumSegment(n - 1) + n;  
+          n++;
+          
+  }
+  //Console.WriteLine(SumNumSegment(N));
+
+
+
 }
 
