@@ -15,7 +15,7 @@ NumSegment(N);
 
 void NumSegment(int n)
 {
-     Console.WriteLine(n);
+     Console.Write($"{n} ");
     {
         if (n <= 1) return;
         n--;
