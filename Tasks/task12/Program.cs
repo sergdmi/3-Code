@@ -10,7 +10,7 @@ int value = new Random().Next(100, 1000);  // [100; 999]
 
 int a = value / 100;
 int b = (value / 10) % 10;
-int c = value% 10;
+int c = value % 10;
 
 int result = a*10 + c;
 
