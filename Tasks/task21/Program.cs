@@ -6,20 +6,37 @@ Console.Clear();
 
 Console.WriteLine("ввести пятизначное целое число: ");
 
-string value = Console.ReadLine();
+int num = Convert.ToInt32(Console.ReadLine());
 
-char[] array = new char[value.Length];
+int a = num / 10000;
+int b = (num / 1000) % 10;
+int c = (num / 10) % 10;
+int d = num % 10;
 
-for(int i = 0; i < value.Length; i++)
-{
-    array[i] = value[i];
-}
-
-if (array[0] == array [4] && array[1] == array[3])
+if (a == d && b == c)
 {
     Console.Write("палиндром");
 }
 
 else Console.Write("не палиндром");
 
+
 // end
+
+// Решение через массив
+
+// string value = Console.ReadLine();
+
+// char[] array = new char[value.Length];
+
+// for(int i = 0; i < value.Length; i++)
+// {
+//     array[i] = value[i];
+// }
+
+// if (array[0] == array [4] && array[1] == array[3])
+// {
+//     Console.Write("палиндром");
+// }
+
+// else Console.Write("не палиндром");
